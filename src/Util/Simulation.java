@@ -106,7 +106,93 @@ public class Simulation {
                 }
                 mainSimulation(machine,price1);
                 break;
-
+            case "c":
+                int price2=coins;
+                int test2 = 0;
+                if (coins>=20){
+                    for (int i = 0; i < machine.size(); i++) {
+                        if(machine.get(i).getCh().equals("c")){
+                            System.out.printf("Вы купили %s%n",machine.get(i).getName());
+                            test2=1;
+                            price2=coins-machine.get(i).getPrice();
+                            machine.remove(i);
+                        }
+                    }
+                    if (test2==0){
+                        System.out.println("Данное действие недоступно");
+                    }
+                }else {
+                    System.out.println("Данное действие недоступно");
+                }
+                mainSimulation(machine,price2);
+                break;
+            case "l":
+                int price3=coins;
+                int test3 = 0;
+                if (coins>=70){
+                    for (int i = 0; i < machine.size(); i++) {
+                        if(machine.get(i).getCh().equals("l")){
+                            System.out.printf("Вы купили %s%n",machine.get(i).getName());
+                            test3=1;
+                            price3=coins-machine.get(i).getPrice();
+                            machine.remove(i);
+                        }
+                    }
+                    if (test3==0){
+                        System.out.println("Данное действие недоступно");
+                    }
+                }else {
+                    System.out.println("Данное действие недоступно");
+                }
+                mainSimulation(machine,price3);
+                break;
+            case "s":
+                int price4=coins;
+                int test4 = 0;
+                if (coins>=30){
+                    for (int i = 0; i < machine.size(); i++) {
+                        if(machine.get(i).getCh().equals("s")){
+                            System.out.printf("Вы купили %s%n",machine.get(i).getName());
+                            test4=1;
+                            price4=coins-machine.get(i).getPrice();
+                            machine.remove(i);
+                        }
+                    }
+                    if (test4==0){
+                        System.out.println("Данное действие недоступно");
+                    }
+                }else {
+                    System.out.println("Данное действие недоступно");
+                }
+                mainSimulation(machine,price4);
+                break;
+            case "p":
+                int price5=coins;
+                int test5 = 0;
+                if (coins>=60){
+                    for (int i = 0; i < machine.size(); i++) {
+                        if(machine.get(i).getCh().equals("p")){
+                            System.out.printf("Вы купили %s%n",machine.get(i).getName());
+                            test5=1;
+                            price5=coins-machine.get(i).getPrice();
+                            machine.remove(i);
+                        }
+                    }
+                    if (test5==0){
+                        System.out.println("Данное действие недоступно");
+                    }
+                }else {
+                    System.out.println("Данное действие недоступно");
+                }
+                mainSimulation(machine,price5);
+                break;
+            case "q":
+                System.out.println("Вы ушли");
+                break;
+            default:
+                System.out.println("Данное действие недоступно");
+                mainSimulation(machine,coins);
+                break;
         }
     }
 }
